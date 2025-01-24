@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/formulario_style.css">
+    <script src="/Scritp.js"></script>
+</head>
+<body>
+    <div class="details">
+        <div class="recentOrders">
+            <div class="subtitulo">
+                <h3><em>Información Inicial</em></h3>
+            </div>
+            <div class="cardBox">
+                <div class="input">
+                    <div class="Tnombre">Nombre</div>
+                    <input type="text" placeholder="Escriba el nombre" id="inputRFC">
+                </div>
+                <div class="input">
+                    <div class="Tnombre">Apellido Paterno</div>
+                    <input type="text" placeholder="Escriba el Apellido" id="inputNombre">
+                </div>
+                <div class="input">
+                    <div class="Tnombre">Apellido Materno</div>
+                    <input type="text" placeholder="Escriba el Apellido" id="inputCURP">
+                </div>
+                
+            </div>
+            <div class="subtitulo">
+                <h3><em>Datos Persoanles</em></h3>
+            </div>
+            <div class="cardBox2">
+                <div class="input">
+                    <div class="Tnombre">¿Cuenta con identificación?</div>
+                    <div style="display: flex; padding-top: 5px;">
+                        <div style="padding-right: 50px;">
+                            <input type="checkbox" id="si" name="identificacion" value="si" onclick="mostrarVentana()">
+                            <label for="si" style="margin-left: 10px;">Sí</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="no" name="identificacion" value="no" onclick="ocultarVentana()">
+                            <label for="no" style="margin-left: 10px;">No</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="ventanaIdentificacion" style="display: none; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9; margin-top: 20px;">
+                    <h3>Selecciona</h3>
+                    <select id="tipoIdentificacion" style="width: 100%; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                        <option value="IDE">IDE</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                    </select>
+                    <input type="text" id="claveIdentificacion" placeholder="Clave" style="width: 100%; padding: 10px; border-radius: 5px;">
+                </div>
+                <div class="input">
+                    <div class="Tnombre">Genero</div>
+                    <select id="input2">
+                        <option value="" disabled>Seleccione su genero</option>
+                        <option value="Masculino" selected>Masculino</option>
+                        <option value=" Femenino">Femenino</option>
+                        <option value="Prefiero">Prefiero no decirlo</option>
+                        <!-- Agregar más opciones -->
+                    </select>
+                    
+                </div>
+                <div class="input">
+                    <div class="Tnombre">Correo electronico</div>
+                    <input type="text" placeholder="Escriba el Email" id="input1">
+                    
+                </div>
+                
+                
+            </div>
+            <div class="cardBox">
+                <div class="input">
+                    <div class="Tnombre">Fecha de nacimiento</div>
+                    <input type="date" placeholder="Escriba el Celular" id="input2">
+                </div>
+                <div class="input">
+                    <div class="Tnombre">Telefono</div>
+                    <input type="text2" placeholder="Escriba el Telefono" id="input2">
+                    
+                </div>
+                    <div class="boton-buscar">
+                        <button type="button" onclick="redirigir()">Siguiente</button>
+                    </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>

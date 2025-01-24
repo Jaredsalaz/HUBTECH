@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 3</title>
+    <link rel="stylesheet" href="formulario_style2.css">
+    <script src="/Scritp.js"></script>
+</head>
+<body>
+    <div class="details">
+        <div class="recentOrders">
+            <div class="subtitulo">
+                <h3><em>Datos Biométricos</em></h3>
+            </div>
+            <div class="cardBox">
+                <div class="input">
+                    <div class="Tnombre">Foto de la Persona</div>
+                    <div class="biometric-data">
+                        <video id="video" width="100%" autoplay style="border-radius: 10px;"></video>
+                        <button onclick="tomarFoto()">Tomar Foto</button>
+                        <canvas id="canvas" style="display: none;"></canvas>
+                        <img src="" alt="Foto de la Persona" id="fotoPersona" style="width: 100%; border-radius: 10px; display: none;">
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="Tnombre">Huella Dactilar</div>
+                    <div class="biometric-data">
+                        <img src="ruta_a_la_huella.jpg" alt="Huella Dactilar" id="huellaDactilar" style="width: 100%; border-radius: 10px;">
+                    </div>
+                </div>
+                <div class="input">
+                    <div class="Tnombre">Imagen del Pasaporte o IDE</div>
+                    <div class="biometric-data">
+                        <img src="ruta_a_la_imagen.jpg" alt="Pasaporte o IDE" id="imagenPasaporteIDE" style="width: 100%; border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+            <div class ="cardBox">
+                <div class="boton-atras">
+                    <button type="button-atras" onclick="history.back()">Atras</button>
+                </div>
+                <div class="boton-buscar">
+                    <button type="button-siguiente" onclick="guardarRegistro()">Guardar</button>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div id="modalConfirmacion" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <p>El registro se ha guardado correctamente.</p>
+        </div>
+    </div>
+
+    <div id="modalConfirmacion-no" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <p>El registro no se ha guardado</p>
+        </div>
+    </div>
+
+    <script src="/Scritp.js"></script>
+    <script src="/Camara.js"></script>
+
+</body>
+</html>
