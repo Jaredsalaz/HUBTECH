@@ -17,19 +17,19 @@ function FotosRedirigir() {
     window.location.href = "formulario3.html";
 }
 
-
 // Función para guardar el registro y mostrar el modal de confirmación
 function guardarRegistro() {
     // Aquí puedes agregar la lógica para guardar el registro
+    const exito = true; // Cambia esto según la lógica de tu aplicación
 
-    // Mostrar el modal de confirmación
-    document.getElementById('modalConfirmacion').style.display = 'block';
-
-    document.getElementById('modalConfirmacion-no').style.display = 'block';
-}
-
-// Función para cerrar el modal de confirmación
-function cerrarModal() {
-    document.getElementById('modalConfirmacion').style.display = 'none';
-    document.getElementById('modalConfirmacion-no').style.display = 'none';
+    if (exito) {
+        // Mostrar el modal de confirmación de guardado exitoso
+        document.getElementById('modalConfirmacion').style.display = 'block';
+        setTimeout(function() {
+            window.location.href = 'formulario_familiares.html';
+        }, 2000); // Redirigir después de 2 segundos
+    } else {
+        // Mostrar el modal de error
+        document.getElementById('modalConfirmacion-no').style.display = 'block';
+    }
 }

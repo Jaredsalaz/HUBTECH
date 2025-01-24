@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="/parentesco.css">
+</head>
+
+<body>
+    <!-- ========================= Main ==================== -->
+    <div class="title">
+        <i class="fa-solid fa-chevron-left" onclick="window.location.href='menu.html';"></i>
+        <h2><em>Datos de familiares</em></h2>
+    </div>
+
+    <!-- ======================= Cards ================== -->
+    <div class="details">
+        <div class="recentOrders">
+            <div class="cardBox2">
+                
+            </div>
+            <div class="cardBox2">
+                <div class="input">
+                    <div class="Tnombre">Nombre</div>
+                    <input type="text" placeholder="Escriba el Nombre" id="nombre">
+                </div>
+                <div class="input">
+                    <div class="Tnombre">Apellido Paterno</div>
+                    <input type="text" placeholder="Escriba el Apellido Paterno" id="apellidoPaterno">
+                    
+                </div>
+                
+                <div class="input">
+                    <div class="Tnombre">Apellido Materno</div>
+                    <input type="text" placeholder="Escriba el Apellido Materno" id="apellidoMaterno">
+                    
+                </div>
+                <div class="input">
+                    <div class="Tnombre">Fecha de Nacimiento</div>
+                    <input type="date" id="fechaNacimiento">
+                </div>
+            </div>
+            
+            <div class="boton-buscar2">
+                <button type="button" class="boton-atras" onclick="window.location.href='formulario_familiares.html';">Cancelar</button>
+                <!-- Botón para activar el nuevo modal -->
+                <button type="button" id="botonGuardar">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación de guardado exitoso -->
+    <div id="modalExito" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modalExito')">&times;</span>
+            <p>El registro se ha guardado correctamente.</p>
+        </div>
+    </div>
+
+    <!-- Modal de error -->
+    <div id="modalError" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modalError')">&times;</span>
+            <p>Hubo un error al guardar el registro. Por favor, inténtelo de nuevo.</p>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="/parentesco.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

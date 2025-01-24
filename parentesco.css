@@ -1,0 +1,866 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #282826;
+  --white: #EFF5FF;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #EFF5FF;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+
+/* ======================= Cards ====================== */
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title i {
+    margin-right: 10px; /* Ajusta el espacio entre el icono y el título */
+    margin-left: 4%;
+    margin-top: 11px;
+    color: #931924; /* Cambia el color del icono a naranja */
+    font-size: 1.3em; /* Ajusta el tamaño del icono */
+    cursor: pointer;
+}
+
+.title h2 {
+    padding-top: 10px;
+    color: #931924;
+    margin: 0; /* Elimina los márgenes por defecto del h2 para un mejor control */
+}
+
+
+
+.cardBox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  
+}
+.cardBox3 {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 40px;
+  
+}
+.cardBox4 {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  
+}
+.card-empleo{
+    position: relative;
+    background: #d4d7eb;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex; /* Cambia 'flex-direction' a 'flex' para orientar los elementos en filas */
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.profile-container {
+    display: flex;
+    flex-direction: column; /* Añade 'flex-direction: column' para orientar los elementos en columnas */
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 50px; /* Añade un margen a la derecha para separar la foto del título y los botones */
+    margin-top: -25px;
+}
+
+.title-button-container {
+    display: flex;
+    flex-direction: column; /* Añade 'flex-direction: column' para orientar los elementos en columnas */
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+    margin-right: 50px;
+}
+
+.profile-picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Hace que la foto de perfil sea circular */
+    
+}
+
+.title-card{
+    font-size: 20px;
+    font-weight: bold;
+}
+.profile-container {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.eye-button {
+    background-color: #931924;
+    color: white;
+    border: none;
+    margin-top: 5px;
+    padding: 1px 10px;
+    height: 81%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.eye-button:hover {
+    background-color: darkorange;
+}
+.eye-button i {
+    font-size: 16px; /* Reduce el tamaño del ícono del ojo */
+}
+
+
+.edit-button {
+    background-color: #931924;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.edit-button:hover {
+    background-color: darkorange;
+}
+.cardBox2 {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+    
+}
+
+.subtitulo {
+  position: relative;
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: -20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  color: #931924;
+  
+}
+.input div {
+    display: flex;
+    align-items: center;
+}
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 16px; 
+    color: #000; /* Color del texto */
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none; /* Oculta el checkbox predeterminado */
+}
+
+.checkbox-label .checkmark {
+    display: inline-block;
+    width: 20px; /* Tamaño del checkmark */
+    height: 20px; /* Tamaño del checkmark */
+    background: #282626;
+    margin-right: 10px; /* Espacio entre el checkmark y el texto */
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: "\2713"; /* Carácter de palomita */
+    color: white; /* Color de la palomita */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px; /* Tamaño de la palomita */
+}
+/*Inputs */
+.input2 {
+    position: relative;
+    padding-top: 0px;
+}
+
+.clear-icon {
+    display: none;
+    position: absolute;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+/* Estilos ajustados para el textarea */
+.input2 textarea {
+    width: 100%;
+    padding: 13px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #282826;
+    color: #fff;
+    resize: vertical; /* Permite al usuario ajustar la altura del textarea */
+}
+
+.input2 textarea:focus {
+    border-color: #931924;
+    box-shadow: 0 0 10px #931924
+}
+.Tnombre {
+  position: relative;
+  width: 100%;
+  padding: 4px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  left: 10px;
+}
+.input {
+  position: relative;
+  padding-top: 0px;
+}
+.clear-icon {
+  display: none;
+  position: absolute;
+  top: 70%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 1.5em;
+}
+.input input[type="text"] {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #282826;
+  color: #fff; 
+}
+
+.input input[type="text"]:focus {
+  border-color: #931924;
+  box-shadow: 0 0 10px #931924;
+}
+.input input[type="text2"] {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #282826;
+  color: #fff; 
+}
+
+.input input[type="text2"]:focus {
+  border-color: #931924;
+  box-shadow: 0 0 10px #931924;
+}
+.input select {
+    width: 100%;
+    padding: 13px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #282826;
+    color: #fff; 
+    appearance: none;
+}
+
+.input select:focus {
+    border-color: #931924;
+    box-shadow: 0 0 10px #931924;
+}
+/*------------------------------------------------- */
+/*-----------------Inpus gris-----------------------*/
+.input-gris div {
+    display: flex;
+    align-items: center;
+}
+ .input-gris {
+    position: relative;
+    padding-top: 0px;
+  }
+  .input-gris input[type="text"] {
+    width: 100%;
+    padding: 13px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #cbcbcb;
+    color: #000000; 
+  }
+#inputFecha {
+    font-weight: bold;
+}
+#inputEstatus {
+    font-weight: bold;
+}
+  .input-gris input[type="text"]:focus {
+    border-color: #931924;
+    box-shadow: 0 0 10px #931924;
+}
+.select-container {
+    position: relative;
+    display: inline-block;
+}
+
+.select-container select {
+    -webkit-appearance: none; /* Remueve el estilo predeterminado de select en WebKit */
+    -moz-appearance: none;    /* Remueve el estilo predeterminado de select en Firefox */
+    appearance: none;         /* Remueve el estilo predeterminado de select */
+    /* Asegúrate de que el select tenga un fondo que combine con el icono */
+    background-color: #282826;
+    color: rgb(255, 255, 255);
+    padding-right: 30px; /* Espacio para el icono */
+    /* Otros estilos para el select aquí (bordes, padding, etc.) */
+}
+
+.select-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+}
+
+
+.boton-buscar .boton-atras {
+    background-color: #fff;
+    color: #000000;
+    border: 2px solid #808080; /* Gris oscuro */
+    transition: all 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  .boton-buscar .boton-atras:hover {
+    background-color: #f2f2f2; 
+    
+  }
+  .boton-buscar {
+    width: auto;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  
+  .boton-buscar button {
+        width: 100%;
+        padding: 9px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background-color: #931924;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1em;
+  }
+  
+  
+  
+  .boton-buscar button:hover {
+    background-color: #931924;
+  }
+  
+
+  /* -----------------Boton de guardar----------------- */
+  .boton-buscar2 .boton-atras {
+    background-color: #fff;
+    color: #000000;
+    border: 2px solid #808080; /* Gris oscuro */
+    transition: all 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  .boton-buscar2 .boton-atras:hover {
+    background-color: #f2f2f2; 
+    
+  }
+  .boton-buscar2 {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  
+  .boton-buscar2 button {
+        width: 25%;
+        margin: 40px; 
+        padding: 9px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background-color: #931924;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1em;
+  }
+  
+  
+  
+  .boton-buscar2 button:hover {
+    background-color: #302623;
+  }
+  
+
+.cardBox .card {
+  position: relative;
+  background: var(--white);
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.cardBox .card:hover {
+  background: var(--blue);
+}
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx {
+  color: var(--white);
+}
+
+/* ================== Order Details List ============== */
+.details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-gap: 30px;
+}
+
+.details .recentOrders {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  background: white;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 0.5px solid #282826;
+  overflow-x: auto;
+}
+.details table {
+    width: 98%;
+    border-collapse: collapse;
+    margin-top: 0px;
+    background: white;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+.mini-titulo {
+    padding-left: 20px; 
+    padding-top: 10px; 
+}
+.details table thead {
+    background-color: #282826;
+    color: #fff;
+    top : -20px;
+    border-radius: 40px;
+    text-align: center;
+}
+.details table tr td {
+    border-right: 1px solid #ffffff; /* Agrega una línea a la derecha de cada td */
+  }
+  .details table tbody tr td {
+    border-right: 1px solid #fff1d7;
+  }
+  
+  
+  .details table tr td:last-child {
+    border-right: none; /* Elimina la línea a la derecha del último td */
+    text-align: end;
+  }
+  .details table thead td {
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+  }
+  .details .recentOrders table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .details .recentOrders table tr:last-child {
+    border-bottom: none;
+  }
+  
+  .details .recentOrders table tbody tr:hover {
+    background: #f2f2f2;
+    color: var(--black1);
+  }
+  .details .recentOrders table tr td {
+    padding: 10px;
+  }
+  .details .recentOrders table tr td:last-child {
+    text-align: end;
+  }
+  .details .recentOrders table tr td:nth-child(2) {
+    text-align: end;
+  }
+  .details .recentOrders table tr td:nth-child(3) {
+    text-align: center;
+  }
+  /*------Icono de editar------*/
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.fas.fa-pencil-alt {
+    padding: 6px;
+    background-color: #FFF1d5;
+    border: 2.5px solid #931924;
+    border-radius: 15px;
+    font-size: 1.4em;
+    color: #931924;
+}
+.fa-solid.fa-trash-can{
+    padding: 6px;
+    background-color: #FFecec;
+    border: 2.5px solid #ffc0c0;
+    border-radius: 15px;
+    font-size: 1.4em;
+    color: #ed9d9d;
+}
+
+.input input[type="date"] {
+    width: 100%;
+    padding: 13px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #282826;
+    color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+
+}
+
+.input input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    filter: invert(1);
+    opacity: 1;
+}
+
+.input input[type="date"]:focus {
+    border-color: #931924;
+    box-shadow: 0 0 10px #931924;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+#cancelButton {
+  background-color: #ffffff; /* Fondo del botón */
+  border: 1px solid #cacaca; /* Borde del botón */
+  color: black; /* Color del texto */
+  border-radius: 10px; /* Borde redondeado */
+  padding: 0.7em 1em;
+  width: 40%;
+  margin-right: 10px;
+  font-size: medium;
+}
+#acceptButton {
+  background-color: #ffab07; /* Fondo del botón */
+  border: 1px solid #ffab07; /* Borde del botón */
+  color: white; /* Color del texto */
+  border-radius: 10px; /* Borde redondeado */
+  padding: 0.7em 1em;
+  width: 40%;
+  margin-bottom: 20px;
+}
+/*Estilo de la alerta */
+
+.alert {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+  border: 1px solid #000;
+  background-color: #fff;
+  text-align: center;
+  z-index: 1000;
+  border-radius: 10px;
+  padding: 1em;
+  width: 80%;
+  height: auto;
+  max-width: 380px;
+}
+
+.alert i {
+  font-size: 2em;
+  color: #008000; /* Cambia el color del ícono a verde */
+}
+
+.fas.fa-check-circle {
+  border-radius: 20%;
+  padding: 10px;
+  background-color: #00ee38; /* Cambia el color de fondo a un verde claro */
+  color: #008000; /* Cambia el color del ícono a verde */
+}
+
+.alert p {
+  margin: 1em 1em;
+}
+
+.alert button {
+  padding: 0.7em 1em;
+  border-radius: 10px;
+  background-color: #008000;
+  width: 90%;
+  color: #fff;
+  font-size: medium;
+}
+.alert .button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 50px;
+}
+
+.alert .icon {
+  background-color: #d5ecd8; /* Cambia el color de fondo a rojo */
+  border-radius: 10px; /* Hace que el icono sea redondo */
+  padding: 10px; /* Agrega espacio alrededor del icono */
+  color: #709c86;
+}
+.fa-solid.fa-circle-exclamation {
+  color: #ff0303; /* Cambia el color del icono */
+  background-color: #ffb7b7; /* Cambia el color de fondo */
+  padding: 10px; /* Agrega un poco de espacio alrededor del icono */
+  border-radius: 15%; /* Hace que el fondo sea circular */
+  font-size: 2.7em;
+}
+.button-container-modal {
+  text-align: center; /* Centra el botón dentro del contenedor */
+  margin-right: 50px;
+  padding: 0;
+  margin-top: -40px;
+  margin-bottom: -20px;
+  
+}
+
+.button-container-modal button {
+  background-color: #ff0000; /* Color de fondo del botón */
+  color: #ffffff; /* Color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  padding: 10px 20px; /* Añade relleno alrededor del texto dentro del botón */
+  border-radius: 5px; /* Bordes redondeados del botón */
+  cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa sobre el botón */
+  font-size: 16px; /* Tamaño del texto del botón */
+}
+
+/* Estilos para pantallas de tabletas y móviles */
+@media (max-width: 768px) {
+  .alert {
+    top: 50%;
+    width: 85%; /* Aumenta el ancho del modal a 85% */
+  }
+
+  .alert .button-container {
+    flex-direction: column; /* Cambia la dirección de los botones a columna */
+    align-items: stretch; /* Asegura que los botones se estiren para llenar el contenedor */
+  }
+
+  
+}
+/* ====================== Responsive Design ========================== */
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    left: 300px;
+  }
+  .cardBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardBox2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+    grid-template-columns: 1fr;
+  }
+  .recentOrders {
+    overflow-x: auto;
+  }
+  .status.inProgress {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardBox2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardHeader h2 {
+    font-size: 20px;
+  }
+  .user {
+    min-width: 40px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle {
+    z-index: 10001;
+  }
+  .main.active .toggle {
+    color: #fff;
+    position: fixed;
+    right: 0;
+    left: initial;
+  }
+}

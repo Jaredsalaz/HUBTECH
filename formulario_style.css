@@ -296,7 +296,7 @@ body {
 .input input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     right: 10px;
-    color: #fff;
+    filter: invert(1);
     opacity: 1;
 }
 

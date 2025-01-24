@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="/formfamiliares.css">
+</head>
+
+<body>
+    <!-- ========================= Main ==================== -->
+    <div class="title">
+        <i class="fa-solid fa-chevron-left" onclick="window.location.href='menu.html';"></i>
+        <h2><em>Datos de familiares</em></h2>
+    </div>
+
+    <!-- ======================= Cards ================== -->
+      
+    <!-- ================ Order Details List ================= -->
+    <div class="details">
+        <div class="recentOrders">
+            <div class="cardBox2">
+                <div class="boton-buscar">
+                    <!-- Botón para abrir la modal -->
+                    <button type="button" onclick="window.location.href='parentesco.html'">Nuevo Parentesco</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Apellido Paterno</td>
+                        <td>Apellido Materno</td>
+                        <td>Fecha de nacimiento</td>
+                        <td>Editar</td>
+                        <td>Eliminar</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Eugenia</td>
+                        <td>Martinez</td>
+                        <td>Gustamante</td>
+                        <td>01/01/1960</td>
+                        <td>
+                            <div class="editar-modal-b icon-container">
+                                <i class="fas fa-pencil-alt"></i> <!-- Icono de lápiz -->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon-container">
+                                <i class="fa-solid fa-trash-can" onclick="eliminarFila(this)"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Juan</td>
+                        <td>Perez</td>
+                        <td>Lopez</td>
+                        <td>15/05/1985</td>
+                        <td>
+                            <div class="editar-modal-b icon-container">
+                                <i class="fas fa-pencil-alt"></i> <!-- Icono de lápiz -->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon-container">
+                                <i class="fa-solid fa-trash-can" onclick="eliminarFila(this)"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Maria</td>
+                        <td>Gonzalez</td>
+                        <td>Hernandez</td>
+                        <td>22/08/1975</td>
+                        <td>
+                            <div class="editar-modal-b icon-container">
+                                <i class="fas fa-pencil-alt"></i> <!-- Icono de lápiz -->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon-container">
+                                <i class="fa-solid fa-trash-can" onclick="eliminarFila(this)"></i>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Carlos</td>
+                        <td>Ramirez</td>
+                        <td>Diaz</td>
+                        <td>10/12/1990</td>
+                        <td>
+                            <div class="editar-modal-b icon-container">
+                                <i class="fas fa-pencil-alt"></i> <!-- Icono de lápiz -->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon-container">
+                                <i class="fa-solid fa-trash-can" onclick="eliminarFila(this)"></i>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+        </div>
+    </div>
+
+    <!-- Modal para nuevo parentesco -->
+    <div id="modalParentesco" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModalParentesco()">&times;</span>
+            <h3>Nuevo Parentesco</h3>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellidoPaterno" placeholder="Apellido Paterno">
+            <input type="text" id="apellidoMaterno" placeholder="Apellido Materno">
+            <input type="date" id="fechaNacimiento" placeholder="Fecha de Nacimiento">
+            <button type="button" onclick="guardarParentesco()">Guardar</button>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="/familiares.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
